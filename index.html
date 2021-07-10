@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+ <html>
+	<head>
+		<meta charset="utf-8">
+		<title>Yatzee by Prinzo Digital Industries</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="lanciodadi.js"></script>
+	</head>
+
+	<body  onload="caricamento()" onbeforeunload="return confermaUscita()" >
+    <nav>
+      <div id="buttoncontainer">
+        <button type="button" name="home"> Home </button>
+        <button type="button" name="Regole" onclick="location.href='yatzee_rules.html'"> Regole </button>
+        <button type="button" name="credits"> Credits </button>
+        <button type="button" name="prova" onclick="confermaUscita();"> prova </button>
+      </div>
+      <span id="boxPunti">
+          qui ci si pò scrivè il cazzo che ci pare tanto viene sovrascritto abbestia un sekkio a sfa'
+
+
+
+      </span>
+    </nav>
+
+    <!-- primo dado -->
+    <section>
+
+      <div class="dado resX" id="dado1">
+
+        <!-- palline del dado -->
+        <div class="pallino n1"></div>
+        <div class="pallino n2"></div>
+        <div class="pallino n3"></div>
+        <div class="pallino n4"></div>
+        <div class="pallino n5"></div>
+        <div class="pallino n6"></div>
+
+      </div>
+
+      <input type="checkbox" id="seldado1" onclick="AbilitaBottone('selezione'); " disabled> <span class="tickcontainer"> <label for="seldado1">&#10003;</label></span>
+
+    </section>
+
+
+    <!-- secondo dado -->
+    <section>
+      <div class="dado resX" id="dado2">
+        <!-- palline del dado -->
+        <div class="pallino n1"></div>
+        <div class="pallino n2"></div>
+        <div class="pallino n3"></div>
+        <div class="pallino n4"></div>
+        <div class="pallino n5"></div>
+        <div class="pallino n6"></div>
+
+      </div>
+      <input type="checkbox" id="seldado2" onclick="AbilitaBottone('selezione'); " disabled> <span class="tickcontainer"> <label for="seldado2"> &#10003; </label></span>
+
+    </section>
+
+    <!-- terzo dado -->
+    <section>
+      <div class="dado resX" id="dado3">
+        <!-- palline del dado -->
+        <div class="pallino n1"></div>
+        <div class="pallino n2"></div>
+        <div class="pallino n3"></div>
+        <div class="pallino n4"></div>
+        <div class="pallino n5"></div>
+        <div class="pallino n6"></div>
+
+      </div>
+      <input type="checkbox" id="seldado3" onclick="AbilitaBottone('selezione'); " disabled> <span class="tickcontainer"> <label for="seldado3"> &#10003; </label></span>
+
+    </section>
+
+    <!-- quarto dado -->
+    <section>
+      <div class="dado resX" id="dado4">
+        <!-- palline del dado -->
+        <div class="pallino n1"></div>
+        <div class="pallino n2"></div>
+        <div class="pallino n3"></div>
+        <div class="pallino n4"></div>
+        <div class="pallino n5"></div>
+        <div class="pallino n6"></div>
+
+      </div>
+      <input type="checkbox" id="seldado4" onclick="AbilitaBottone('selezione'); " disabled> <span class="tickcontainer"> <label for="seldado4"> &#10003; </label></span>
+
+    </section>
+
+      <!-- quinto dado -->
+    <section>
+      <div class="dado resX" id="dado5">
+        <!-- palline del dado -->
+        <div class="pallino n1"></div>
+        <div class="pallino n2"></div>
+        <div class="pallino n3"></div>
+        <div class="pallino n4"></div>
+        <div class="pallino n5"></div>
+        <div class="pallino n6"></div>
+
+      </div>
+      <input type="checkbox" id="seldado5" onclick="AbilitaBottone('selezione'); " disabled> <span class="tickcontainer"> <label for="seldado5"> &#10003; </label></span>
+
+    </section>
+
+    <main id="schermataAiuti">
+      <p class='info1'>Seleziona i dadi che vuoi rilanciare e premi "seleziona". <br> Se non intendi rilanciare nessun dado, premi "non rilancio nessun dado!" </p>
+      <div class='info2'>seleziona la vincita:
+        <div class="row">
+          <div class="box" id="boxN0"> uno <input type="radio" name="wintable" value="Uno">  </div> <div class="box c2" id="boxN1"> coppia (15pt) <input type="radio" name="wintable" value="coppia"> </div>
+        </div>
+        <div class="row">
+          <div class="box" id="boxN2"> due <input type="radio" name="wintable" value="Due">  </div> <div class="box c2" id="boxN3"> doppia coppia (20pt) <input type="radio" name="wintable" value="doppiacoppia"> </div>
+        </div>
+        <div class="row">
+          <div class="box" id="boxN4"> tre <input type="radio" name="wintable" value="Tre">  </div> <div class="box c2" id="boxN5"> tris (30pt) <input type="radio" name="wintable" value="tris"> </div>
+        </div>
+        <div class="row">
+          <div class="box" id="boxN6"> quattro <input type="radio" name="wintable" value="Quattro">  </div> <div class="box c2" id="boxN7"> full (50pt) <input type="radio" name="wintable" value="full"> </div>
+        </div>
+        <div class="row">
+          <div class="box" id="boxN8"> cinque <input type="radio" name="wintable" value="Cinque">  </div> <div class="box c2" id="boxN9"> poker (90pt) <input type="radio" name="wintable" value="poker"> </div>
+        </div>
+        <div class="row">
+          <div class="box" id="boxN10"> sei <input type="radio" name="wintable" value="Sei">  </div> <div class="box c2" id="boxN11"> scala (120pt) <input type="radio" name="wintable" value="scala"> </div>
+        </div>
+        <div class="row">
+          <div class="box yatzee" id="boxN12"> yatzee (150pt) <input type="radio" name="wintable" value="yatzee">  </div>
+        </div>
+        <button type="button" name="dichiara" id="dichiara" onclick="giocatoreCorrente.dichiara();          visualizza('info3'); stampaInfo3(); console.log(stringaVincita); DisabilitaBottone('dichiara');"> dichiara!</button>
+      </div>
+     <div class='info3'>
+      <button type="button" name="ok" id="ok"  onclick="fineTurno();  AbilitaBottone('dichiara');"> Ok </button>
+     </div>
+    </main>
+    <footer>
+      <button type="button" name="lancio" id="lancio" onclick="lancioGlobale();                       abilitaSelezioneDadi(); AbilitaBottone('noRilancio'); DisabilitaBottone('lancio'); visualizza('info1'); abilitaSelezioneDadi();"> lancia!</button>
+      <button type="button" name="selezione" id="selezione" onclick="resetDadiSelezionati();          deselezioneDadi();AbilitaBottone('rilancio'); DisabilitaBottone('selezione'); DisabilitaBottone('noRilancio'); nascondi('info1');" disabled> seleziona </button>
+      <button type="button" name="rilancio" id="rilancio" onclick="rilancio(); giocatoreCorrente.scansioneArrayVincite();                        DisabilitaBottone('rilancio');visualizza('info2');  " disabled> Rilancia!</button> <br> <br>
+      <button type="button" name="noRilancio" id="noRilancio" onclick="giocatoreCorrente.scansioneArrayVincite();                               deselezioneDadi();DisabilitaBottone('selezione');DisabilitaBottone('noRilancio'); nascondi('info1');DisabilitaBottone('rilancio');visualizza('info2'); " disabled> non rilancio nessun dado! </button>
+      <br>
+      <a id="credit" href="https://it.freepik.com/foto/sfondo">Foto dello sfondo creata da freepik - it.freepik.com</a>
+    </footer>
+
+
+
+
+
+
+
+	</body>
+ </html>

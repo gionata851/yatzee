@@ -1,0 +1,507 @@
+*{
+	margin :0;
+	font-size: 1.7vh;
+	box-sizing: border-box;
+}
+
+html{
+	background-image: url(sfondo.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #00342F;
+}
+
+body{
+	font-family: monospace;
+	color:lightgrey;
+}
+
+button {
+	font-family: monospace;
+	color:black;
+}
+
+.regole{
+	width: 50%;
+	margin-left: 7%;
+	/* background-color: rgba(0,0,0,0.2); */
+}
+
+
+.regole a{
+	background-color: lightgrey;
+	text-align: center;
+	display: block;
+	margin: auto;
+	width: 10%;
+	border-radius: 10%;
+	text-decoration: none;
+	color: black;
+	padding:15px;
+	font-size: 19px;
+}
+
+
+
+.regole h1{
+	font-family: monospace;
+	font-size: 40px;
+	margin: 50px 20px 35px;
+
+}
+
+.regole p{
+	margin: 10px;
+	line-height: 30px;
+	text-align: justify;
+	background-color: rgba(0,0,0,0.4);
+	padding : 15px;
+	font-size: 20px;
+}
+
+
+/* menu pulsanti in alto */
+nav{
+	margin : 2vh 0vw 9vh 1vw;
+	color: lightgrey;
+	/* white-space: nowrap; */
+	width: 99vw;
+	height : 30px;
+	/* background-color: rgba(255,255,255,0.1); */
+}
+
+#buttoncontainer{
+	width: 23%;
+	/* min-width: 250px; */
+	max-width: 350px;
+	/* display: inline-block; */
+	/* background-color: rgba(255,255,255,0.1); */
+	float:left;
+}
+
+#boxPunti {
+	display: inline-block;
+	width:70%;
+	padding: 0 0 0 15px;
+	font-size: 1.5vh;
+	/* line-height: 16px; */
+}
+
+#boxPunti .box1{
+	display: block;
+	float:left;
+	font-size: inherit;
+}
+
+#boxPunti .box2{
+		display: block;
+		float:right;
+		font-size: inherit;
+		text-align: right;
+}
+
+section{
+	position:relative;
+	/* width:100vw; */
+}
+
+/* dadi */
+.dado{
+	width : 11vh;
+	height : 11vh;
+	border : 1px solid lightgrey;
+	text-align: center;
+	font-size: 120px;
+	position : relative;
+	background-color: red;
+	border-radius: 25%;
+	margin-bottom : 2vh;
+	margin-left: 150px;
+	display : block;
+	transition : all 0.5s;
+}
+
+section > input{
+	display: none;
+}
+
+.tickcontainer{
+  display: inline-block;
+  /* padding: 0; */
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  /* line-height: 30px; */
+  text-align: center;
+  font-size:20px;
+  /* padding-bottom:20px; */
+  color: rgba(0, 0, 0, 0);
+	position:absolute;
+	bottom: 50px;
+	left: 270px;
+	margin:0;
+}
+
+input:checked + .tickcontainer{
+  color: grey;
+  background-color: #ffb366;
+  box-shadow: 2px 2px 6px #ffb366 , 2px -2px 6px #ffb366, -2px -2px 6px #ffb366 ,-2px 2px 6px #ffb366 ;
+}
+
+input:disabled + .tickcontainer{
+	border-color: rgba(0,0,0,0)
+}
+
+
+section:first-child{
+	margin-top : 9vh;
+}
+
+.pallino{
+	width: 14%;
+	height: 14%;
+	border: 1px solid grey;
+	border-radius: 50%;
+	background-color: white;
+	transition : all 0.5s;
+}
+
+/* pulsanti in basso */
+footer{
+	margin-top : 5vh;
+	margin-left: 20px;
+	/* width:100vw; */
+	margin-bottom: 1vh;
+}
+
+button:disabled{
+	color: lightgrey;
+}
+
+
+/* schermata aiuti */
+#schermataAiuti{
+	padding: 20px;
+	width: 50%;
+	min-width: 300px;
+	height: 40vh;
+	position: absolute;
+	left: 400px;
+	top: 20%;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 1%;
+	color: lightgrey;
+}
+
+#ok{
+	display: block;
+}
+
+#credit{
+	display:inline-block;
+	font-size: 11px;
+	color: lightblue;
+	margin-top : 4vh;
+	/* margin-bottom: 55vh; */
+}
+
+
+
+/* schermata tabella info 2 con vincite */
+#schermataAiuti .row{
+	width : 85%;
+	min-width: 230px;
+	white-space: nowrap;
+	margin:auto;
+	font-size: 1.5vh;
+	/* line-height: 18px; */
+}
+
+.box{
+	text-align: center;
+	width: 50%;
+	border: 1px solid lightgrey;
+	min-width: 115px;
+	display:block;
+	float:left;
+	margin-bottom: 4px;
+	font-size: inherit;
+	/* line-height: inherit; */
+}
+
+.box.c2{
+	/* position: relative;
+	right: 5px; */
+	float:left;
+	border-left: 0;
+	font-size: inherit;
+	/* line-height: inherit; */
+}
+
+/* #schermataAiuti input{
+	 display: none; 
+} */
+
+.yatzee{
+	float:left;
+	width: 100%;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+/* css pallini resettati */
+
+.resX {
+	animation : myclockrotation 0.8s linear infinite;
+	animation-fill-mode: both;
+}
+
+@keyframes myclockrotation {
+	/* 50% {transform:rotate(180deg)}
+	75% {transform:rotate(270deg)} */
+	100% {transform:rotate(360deg)}
+}
+
+
+.resX .pallino.n1{
+	position : absolute;
+	bottom : 43%;
+	left : 20%;
+}
+
+.resX .pallino.n2{
+	position : absolute;
+	top : 20%;
+	right : 31%;
+}
+
+.resX .pallino.n3{
+	position : absolute;
+	top : 20%;
+	left : 31%;
+}
+
+.resX .pallino.n4{
+	position : absolute;
+	bottom : 43%;
+	right : 20%;
+}
+
+.resX .pallino.n5{
+	position : absolute;
+	bottom : 20%;
+	left : 31%;
+}
+
+.resX .pallino.n6{
+	position : absolute;
+	bottom : 20%;
+	right : 31%;
+}
+
+
+/* css pallini risultato 1 */
+
+
+.res1 .pallino.n1{
+	position : absolute;
+	bottom : 43%;
+	left : 43%;
+}
+
+.res1 .pallino.n2{
+display: none;
+}
+
+.res1 .pallino.n3{
+display: none;
+}
+
+.res1 .pallino.n4{
+display: none;
+}
+
+.res1 .pallino.n5{
+display: none;
+}
+
+.res1 .pallino.n6{
+display: none;
+}
+
+/* css pallini risultato 2 */
+
+.res2 .pallino.n1{
+	position : absolute;
+	bottom : 15%;
+	right : 15%;
+}
+
+.res2 .pallino.n2{
+	position:absolute;
+	top: 15%;
+	left: 15%;
+}
+
+.res2 .pallino.n3{
+	display: none;
+}
+
+.res2 .pallino.n4{
+	display: none;
+}
+
+.res2 .pallino.n5{
+	display: none;
+}
+
+.res2 .pallino.n6{
+	display: none;
+}
+
+/* css pallini risultato 3 */
+
+.res3 .pallino.n1{
+	position : absolute;
+	bottom : 15%;
+	right : 15%;
+}
+
+.res3 .pallino.n2{
+	position:absolute;
+	top: 15%;
+	left: 15%;
+}
+
+.res3 .pallino.n3{
+	position : absolute;
+	bottom : 43%;
+	left : 43%;
+}
+
+.res3 .pallino.n4{
+	display: none;
+}
+
+.res3 .pallino.n5{
+	display: none;
+}
+
+.res3 .pallino.n6{
+	display: none;
+}
+
+/* css pallini risultato 4 */
+
+.res4 .pallino.n1{
+	position : absolute;
+	bottom : 15%;
+	right : 15%;
+}
+
+.res4 .pallino.n2{
+	position:absolute;
+	top: 15%;
+	left: 15%;
+}
+
+.res4 .pallino.n3{
+	position:absolute;
+	top: 15%;
+	right: 15%;
+}
+
+.res4 .pallino.n4{
+	position:absolute;
+	bottom: 15%;
+	left: 15%;
+}
+
+.res4 .pallino.n5{
+	display: none;
+}
+
+.res4 .pallino.n6{
+	display: none;
+}
+
+/* css pallini risultato 5 */
+
+.res5 .pallino.n1{
+	position : absolute;
+	bottom : 15%;
+	right : 15%;
+}
+
+.res5 .pallino.n2{
+	position:absolute;
+	top: 15%;
+	left: 15%;
+}
+
+.res5 .pallino.n3{
+	position:absolute;
+	top: 15%;
+	right: 15%;
+}
+
+.res5 .pallino.n4{
+	position:absolute;
+	bottom: 15%;
+	left: 15%;
+}
+
+.res5 .pallino.n5{
+	position : absolute;
+	bottom : 43%;
+	left : 43%;
+}
+
+.res5 .pallino.n6{
+	display: none;
+}
+
+/* css pallini risultato 6 */
+
+.res6 .pallino.n1{
+	position : absolute;
+	bottom : 15%;
+	right : 15%;
+}
+
+.res6 .pallino.n2{
+	position:absolute;
+	top: 15%;
+	left: 15%;
+}
+
+.res6 .pallino.n3{
+	position:absolute;
+	top: 15%;
+	right: 15%;
+}
+
+.res6 .pallino.n4{
+	position:absolute;
+	bottom: 15%;
+	left: 15%;
+}
+
+.res6 .pallino.n5{
+	position : absolute;
+	bottom : 43%;
+	left : 15%;
+}
+
+.res6 .pallino.n6{
+	position : absolute;
+	bottom : 43%;
+	right : 15%;
+}
+
+.info1, .info2, .info3{
+	display: none;
+	margin : 20px;
+}
